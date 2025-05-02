@@ -1,0 +1,249 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  background-color: #57068c;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 2rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo img {
+  height: 32px;
+}
+
+.logo span {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  font-size: 1rem;
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+.home {
+  height: 100vh;
+  
+  
+  background-image: url("/static/images/Home-Page.png");
+  
+
+  background-size: cover;
+  background-position: center center;
+}
+
+.home h1 {
+  font-size: 50px;
+  font-weight: 800;
+}
+
+.home p {
+  font-size: 45px;
+  font-weight: 400;
+  color: wheat;
+  text-align: center;
+  padding-top: 250px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.home p::after {
+  content: "";
+  animation-name: typing;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes typing {
+  0% {
+    content: "U";
+  }
+
+  15% {
+    content: "UN|";
+  }
+
+  25% {
+    content: "UNI|";
+  }
+
+  35% {
+    content: "UNIV|";
+  }
+
+  45% {
+    content: "UNIVE|";
+  }
+
+  55% {
+    content: "UNIVER|";
+  }
+
+  65% {
+    content: "UNIVERS|";
+  }
+
+  75% {
+    content: "UNIVERSI|";
+  }
+
+  85% {
+    content: "UNIVERSIT|";
+  }
+
+  100% {
+    content: "UNIVERSITY|";
+  }
+
+}
+.home-links{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-links .link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-links .link a{
+  color:white;
+}
+.home-links .link {
+  margin-left: 5px;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.716);
+}
+
+
+#About .container {
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  padding-top: 70px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sidebar h3 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 0.75rem;
+}
+
+.sidebar a {
+  color: #57068c;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+.main-content h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.main-content p {
+  color: #404040;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.mission-box {
+  color: #404040;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  font-size: 0.9rem;
+  position: relative;
+  align-self: start;
+}
+
+.mission-box h4 {
+  padding-bottom: 10px;
+  color: #57068c;
+  margin-top: 0;
+  font-size: 1rem;
+}
+
+.mission-box::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 30px;
+  background: #57068c;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.footer {
+  background-color: #57068c;
+  color: white;
+  padding: 1.1rem 1.1rem;
+  font-size: 0.9rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+}

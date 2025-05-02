@@ -1,0 +1,100 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NYU Student Login</title>
+  <link rel="stylesheet" href="{% static 'css/login-style.css' %}">
+</head>
+<body>
+  <div class="login-container">
+
+    <div class="logo-container">
+      <img src="{% static 'images/NYU-Logo.png' %}" alt="NYU Logo" class="nyu-logo" />
+    </div>
+
+    <!-- ✅ نموذج تسجيل الدخول -->
+    <form class="login-form" id="login-form" action="{% url 'login_submit' %}" method="POST">
+      {% csrf_token %}
+
+      {% if error_message %}
+        <p style="color: red; font-size: 0.9rem;">{{ error_message }}</p>
+      {% endif %}
+
+      <label for="student-id">Student ID</label>
+      <input type="text" id="student-id" name="student_id" placeholder="Enter your student ID" required />
+
+      <label for="password">Password</label>
+      <input 
+        type="password" 
+        id="password" 
+        name="password" 
+        placeholder="Enter your password" 
+        required 
+        minlength="8"
+      />
+      <small id="password-error" class="error-message" style="display:none; color: red; font-size: 0.85rem;">
+        Password must be at least 8 characters.
+      </small>
+
+      <div class="forgot-password">
+        <a href="#" onclick="showResetForm()">Forgot password?</a>
+      </div>
+
+      <!-- ✅ زر تسجيل الدخول -->
+      <button type="submit" id="login">LogIn</button>
+    </form>
+
+    <!-- ✅ نموذج إعادة تعيين كلمة المرور -->
+    <form class="reset-form" id="reset-form" style="display: none;">
+      <label for="email">Enter your NYU Email</label>
+      <input type="email" id="email" name="email" placeholder="example@nyu.edu" required />
+      <button type="submit">Send Reset Link</button>
+      <div class="back-to-login">
+        <a href="#" onclick="showLoginForm()">Back to Login</a>
+      </div>
+    </form>
+
+    <p class="note">
+      Need help?
+      <a href="mailto:support@nyu.edu?subject=Login%20Help&body=Hi%20Support%2C%0A%0AI'm%20having%20trouble%20logging%20into%20the%20student%20portal.%20Can%20you%20please%20assist%3F%0A%0AThank%20you.">
+        Contact IT Support
+      </a>
+    </p>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    function showResetForm() {
+      document.getElementById('login-form').style.display = 'none';
+      document.getElementById('reset-form').style.display = 'flex';
+    }
+
+    function showLoginForm() {
+      document.getElementById('reset-form').style.display = 'none';
+      document.getElementById('login-form').style.display = 'flex';
+    }
+
+    document.getElementById('reset-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('A password reset link has been sent to your email.');
+      showLoginForm();
+    });
+
+    // Password Validation
+    const loginForm = document.getElementById('login-form');
+    const passwordInput = document.getElementById('password');
+    const passwordError = document.getElementById('password-error');
+
+    loginForm.addEventListener('submit', function(e) {
+      if (passwordInput.value.length < 8) {
+        e.preventDefault();
+        passwordError.style.display = 'block';
+      } else {
+        passwordError.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+
+    <link rel="stylesheet" href="{% static 'css/profile-rank.css' %}">
+    <link rel="stylesheet" href="{% static 'css/profile-styles.css' %}">
+</head>
+<body>
+    <section id="Navbar" >
+        <nav class="navbar">
+            <div class="logo">
+              <img src="{% static 'images/OIP (1).jpg' %}" alt="NYU Logo" />
+              <span>NYU</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="home">Home</a></li>
+                <li><a href="courses">My Courses</a></li>
+                <li><a href="profile">Profile</a></li>
+                <li><a href="home#events">Events</a></li>
+                <li><a href="home#About">About</a></li>
+                <li><a href="home#Complaints">Complaints & Suggestions</a></li>
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <div class="container" id="Profile">
+        <header>
+            <div class="profile-header">
+                <img src="{% static 'images/OIP (1).jpg' %}" alt="Profile " class="profile-pic">
+                <h1>{{ student.name }}</h1>
+                <p>{{ student.major }} Student | NYU University</p>
+            </div>
+        </header>
+
+        <main>
+            <section class="personal-info" >
+                <h2>Personal Information</h2>
+                <ul>
+                    <li><strong>Email:</strong> {{ student.email }}</li>
+                    <li><strong>Phone:</strong> {{ student.phone }}</li>
+                    <li><strong>Date of Birth:</strong> {{ student.date_of_birth }}</li>
+                    <li><strong>Address:</strong> {{ student.address }}</li>
+                </ul>
+            </section>
+
+            <section class="academic-info">
+                <div class="rank-box">
+                    <div class="rank-display">
+                        Rank <span class="rank-number">{{ student.rank }}</span>
+                    </div>
+                </div>
+                <h2>Academic Information</h2>
+                <ul>
+                    <li><strong>Major:</strong> {{ student.major }}</li>
+                    <li><strong>Current GPA:</strong> {{ student.gpa }}</li>
+                    <li><strong>Expected Graduation:</strong> {{ student.expected_graduation }}</li>
+                    <li><strong>Courses:</strong> Web Development, Algorithms, Database Systems</li> <!-- لو هتخزن الكورسات في قاعدة البيانات نعدّل دي كمان -->
+                </ul>
+            </section>
+
+            <section class="contact-info">
+                <h2>Contact Information</h2>
+                <p>Feel free to reach out via email or connect on social media.</p>
+                <ul class="social-links">
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">GitHub</a></li>
+                </ul>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

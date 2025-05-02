@@ -1,0 +1,73 @@
+
+#Complaints{
+    padding-top: 70px;
+}
+#Complaints .container {
+   width: 80%;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .form-header h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .form-header p {
+    color: #666;
+    margin-top: 8px;
+  }
+
+.feedback-form .form-group {
+    padding-bottom: 30px;
+}
+
+.feedback-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.feedback-form input, 
+.feedback-form select, 
+.feedback-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.feedback-form input[type="text"], 
+.feedback-form input[type="email"], 
+.feedback-form select {
+    margin-bottom: 10px;
+}
+
+.feedback-form textarea {
+    resize: vertical;
+}
+
+.feedback-form button {
+    background-color: #57068c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.feedback-form button:hover {
+    background-color: #bd05f5;
+}
+

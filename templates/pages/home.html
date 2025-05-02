@@ -1,0 +1,221 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYU</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'css/home-style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/comp-style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/events-style.css' %}">
+</head>
+<body>
+  <!-- NavBar start -->
+
+    <section id="Navbar" >
+        <nav class="navbar">
+            <div class="logo">
+              <img src="{% static 'images/OIP (1).jpg' %}" alt="NYU Logo" />
+              <span>NYU</span>
+            </div>
+            <ul class="nav-links">
+              <li><a href="#Home">Home</a></li>
+              <li><a href="courses">My Courses</a></li>
+              <li><a href="profile">Profile</a></li>
+              <li><a href="#events">Events</a></li>
+              <li><a href="#About">About</a></li>
+              <li><a href="#Complaints">Complaints & Suggestions</a></li>
+              <li><a href="{% url 'logout' %}">Logout</a></li>
+            </ul>
+          </nav>
+    </section>
+<!-- NavBar End -->
+
+<!-- Home start -->
+    <section id="Home">
+      <div class="home">
+        <p>NYU </p>
+        <div class="home-links">
+          <div class="link">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          </div>
+          <div class="link">
+             <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          </div>
+          <div class="link">
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+          <div class="link">
+             <a href="#"><i class="fa-brands fa-behance"></i></a>
+          </div>
+          <div class="link">
+             <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+      </div>
+    </section>
+
+<!-- Home End -->
+
+  <!-- Events Start -->
+  <section class="events" id="events">
+    <header>
+      <div class="logo-container">
+          <img src="{% static 'images/NYU-Logo.png' %}" alt="NYU Logo" class="nyu-logo" />
+      </div>
+      <h1> NYU Events</h1>
+  </header>
+      <h2>Upcoming Events</h2>
+      <div class="event-container">
+          <!-- Event 1: Concert -->
+          <div class="event">
+              <h3>University Concert: "The Musical Night"</h3>
+              <p><strong>Date:</strong> April 20, 2025</p>
+              <p><strong>Time:</strong> 7:00 PM</p>
+              <p><strong>Location:</strong> Main Auditorium</p>
+              <button class="event-button">Get Details</button>
+          </div>
+          
+          <!-- Event 2: Tech Talk -->
+          <div class="event">
+              <h3>Tech Talk: "AI in Everyday Life"</h3>
+              <p><strong>Date:</strong> April 25, 2025</p>
+              <p><strong>Time:</strong> 3:00 PM</p>
+              <p><strong>Location:</strong> Engineering Block, Room 101</p>
+              <button class="event-button">Get Details</button>
+          </div>
+
+          <!-- Event 3: Workshop -->
+          <div class="event">
+              <h3>Workshop: "Building Web Apps with React"</h3>
+              <p><strong>Date:</strong> April 28, 2025</p>
+              <p><strong>Time:</strong> 10:00 AM</p>
+              <p><strong>Location:</strong> Computer Science Lab</p>
+              <button class="event-button">Get Details</button>
+          </div>
+
+          <!-- Event 4: Sports Day -->
+          <div class="event">
+              <h3>Sports Day: "Annual Track and Field Competition"</h3>
+              <p><strong>Date:</strong> May 1, 2025</p>
+              <p><strong>Time:</strong> 9:00 AM</p>
+              <p><strong>Location:</strong> University Sports Ground</p>
+              <button class="event-button">Get Details</button>
+          </div>
+
+          <!-- Event 5: Career Fair -->
+          <div class="event">
+              <h3>Career Fair: "Connecting Students with Employers"</h3>
+              <p><strong>Date:</strong> May 5, 2025</p>
+              <p><strong>Time:</strong> 11:00 AM</p>
+              <p><strong>Location:</strong> University Hall</p>
+              <button class="event-button">Get Details</button>
+          </div>
+      </div>
+  </section>
+<!-- Events End -->
+
+<!-- About Start -->
+    <section id="About" style="padding-top: 70px;">
+        <div class="container">
+            <aside class="sidebar">
+              <h3>In This Section</h3>
+              <ul>
+                <li><a href="#">Leadership & University Administration</a></li>
+                <li><a href="#">University Initiatives</a></li>
+                <li><a href="#">News, Publications, and Facts</a></li>
+                <li><a href="#">Careers at NYU</a></li>
+                <li><a href="#">Visitor Information</a></li>
+                <li><a href="#">Policies and Guidelines</a></li>
+                <li><a href="#">Giving to NYU</a></li>
+              </ul>
+            </aside>
+        
+            <main class="main-content">
+              <h1>About NYU</h1>
+              <p>Since its founding in 1831, NYU has been an innovator in higher education, reaching out to an emerging middle class, embracing an urban identity and professional focus, and promoting a global vision that informs its 20 schools and colleges.</p>
+              <p>Today, that trailblazing spirit makes NYU one of the most prominent and respected research universities in the world, featuring top-ranked academic programs and accepting fewer than one in eight undergraduates. Anchored in New York City and with degree-granting campuses in Abu Dhabi and Shanghai as well as 12 study away sites throughout the world, NYU is a leader in global education, with more international students and more students studying abroad than any other US university.</p>
+              <p>NYU students come from nearly every state and 133 countries, and the university draws upon the diverse backgrounds of our faculty, staff, and students, ensuring its scholarship and teaching benefit from a wide range of perspectives. NYU takes seriously its role as an engine of social mobility, and stands out among the top US universities in its representation of low-income and first-generation students within its community.</p>
+              <p>The largest private research university in the US, NYU provides a rigorous, demanding education to more than 65,000 students and undertakes $1.27 billion in research annually. It counts among its faculty recipients of the highest scholarly honors and is a top producer of patents and revenue from licensing among US universities. NYU has a vast network of alumni who have gone on to succeed across professions, from the sciences to the arts and government, throughout the world.</p>
+            </main>
+        
+            <aside class="mission-box">
+              <h4>Mission Statement</h4>
+              <p>Great cities are engines of creativity, and NYU takes its name and spirit from one of the busiest, diverse, and dynamic cities of all.</p>
+            </aside>
+          </div>
+
+    </section>
+
+  <!-- About End -->
+
+    <!-- Complaints start -->
+
+    <section id="Complaints">
+        <div class="form-container">
+          <div class="form-header">
+            <h2>Complaints & Suggestions</h2>
+            <p>Submit your feedback and concerns.</p>
+          </div>
+
+
+       <div class="container">
+      <div>
+        <form action="{% url 'submit_feedback' %}" method="post" class="feedback-form">
+          {% csrf_token %}
+          <div class="form-group">
+              <label for="student-name">Your Name (Optional):</label>
+              <input type="text" id="student-name" name="name" placeholder="Enter your name" />
+          </div>
+        
+          <div class="form-group">
+              <label for="email">Your Email (Optional):</label>
+              <input type="email" id="email" name="email" placeholder="Enter your email" />
+          </div>
+        
+          <div class="form-group">
+              <label for="feedback-type">Feedback Type:</label>
+              <select id="feedback-type" name="feedback_type">
+                  <option value="complaint">Complaint</option>
+                  <option value="suggestion">Suggestion</option>
+                  <option value="other">Other</option>
+              </select>
+          </div>
+        
+          <div class="form-group">
+              <label for="feedback-message">Your Message:</label>
+              <textarea id="feedback-message" name="message" rows="4" placeholder="Enter your feedback..."></textarea>
+          </div>
+          
+          <div class="form-group">
+              <button type="submit">Submit Feedback</button>
+          </div>
+        </form>
+        
+      </div>
+       </div>
+    
+    </section>
+     <!-- Complaints End -->
+  
+  
+ <!-- Footer start -->
+    <section id="Fotter">
+        <footer class="footer">
+            <div class="footer-content">
+              <div class="footer-left">
+                <p>&copy; 2025 New York University</p>
+              </div>
+              <div class="footer-links">
+                <a href="#">Accessibility</a>
+                <a href="#">Privacy</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Contact Us</a>
+              </div>
+            </div>
+          </footer>
+          
+    </section>
+     <!-- Fotter end -->
+</body>
+</html>
