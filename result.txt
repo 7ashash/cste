@@ -1,0 +1,13 @@
+	1: ID, name= void
+	1: ID, name= main
+	1: (
+	1: )
+	16: ID, name= output
+	16: (
+	16: ID, name= sum
+	16: )
+	16: ;
+	17: ERROR: }
+	17: reserved word: else
+	20: ERROR: }
+	20: EOF
